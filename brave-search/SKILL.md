@@ -1,11 +1,23 @@
 ---
 name: brave-search
 description: Web search and content extraction via Brave Search API. Use for searching documentation, facts, or any web content. Lightweight, no browser required.
+disable-model-invocation: true
 ---
 
 # Brave Search
 
 Web search and content extraction using the official Brave Search API. No browser required.
+
+> **Kept, but not offered to the model.** `disable-model-invocation: true` keeps
+> this skill out of the system prompt, so nothing selects it automatically. It
+> stays available on request as `\skill:brave-search`.
+>
+> Brave's free tier needs a credit card and caps out near 1,000 queries a month,
+> which is not enough to depend on. Use the `websearch` skill instead: it queries
+> a self-hosted SearXNG federating ~80 engines, falls back to DuckDuckGo
+> automatically, and needs no key at all.
+>
+> To re-enable, delete the `disable-model-invocation` line above.
 
 ## Setup
 
